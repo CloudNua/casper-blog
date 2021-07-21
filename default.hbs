@@ -11,7 +11,7 @@
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.css">
     <link rel="stylesheet" type="text/css" href="{{asset "built/screen.css"}}" />
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
@@ -99,12 +99,13 @@ $(document).ready(function () {
 });
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.10.0/tocbot.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js">></script>
 <script>
     tocbot.init({
         tocSelector: '.toc',
         contentSelector: '.post-content',
-        hasInnerContainers: true
+        headingSelector: 'h1, h2, h3',
+        hasInnerContainers: true,
     });
 </script>
 {{{block "scripts"}}}
