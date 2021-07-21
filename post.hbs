@@ -72,11 +72,31 @@ into the {body} tag of the default.hbs template --}}
         {{content}}
     </section>
 
-    {{!--
-    <section class="article-comments gh-canvas">
+    
+    {{!-- <section class="article-comments gh-canvas">
         If you want to embed comments, this is a good place to paste your code!
-    </section>
-    --}}
+    </section> --}}
+    
+    {{!-- TalkYard Service & Sign-up --}}
+    <section class="article-comments gh-canvas">
+    {{#if access}}
+    <script>talkyardServerUrl='https://comments-for-blog-cloudnua-io.talkyard.net';</script>
+    <script async defer src="https://c1.ty-cdn.net/-/talkyard-comments.min.js"></script>
+    <!-- You can specify a per page discussion id on the next line, if your URLs might change. -->
+    <div class="talkyard-comments" data-discussion-id="{{comment_id}}" style="margin-top: 45px;">
+        <noscript>Please enable Javascript to view comments.</noscript>
+        <p style="margin-top: 25px; opacity: 0.9; font-size: 96%">Comments powered by
+            <a href="https://www.talkyard.io">Talkyard</a>.</p>
+        </div>
+    {{else}}
+    <p>By becoming a member you can reply to the author:</p>
+    <form data-members-form>
+        <input data-members-email type="email" required="true" />
+            <button type="submit">Continue</button>
+        </form>
+        {{/if}}
+        </section>
+   
 
 </article>
 
