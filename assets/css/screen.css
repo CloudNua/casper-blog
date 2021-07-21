@@ -1975,7 +1975,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 0.2fr;
     padding: 0 0 6vw;
-    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
 }
 .toc-container {
     order: 1;
