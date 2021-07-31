@@ -1090,7 +1090,8 @@ between them, so it looks like 1 big gallery */
 }
 
 .kg-gallery-container {
-    position: relative;
+    max-width: 720px;
+    margin: auto;
 }
 
 .kg-gallery-row {
@@ -1991,10 +1992,10 @@ body {
     line-height: 1.6em;
     padding: 0 0.8em;
 }
-@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+@media only screen and (min-width: 1025px) {
     .toc {
         position: fixed;
-        top: 54px;
+        top: 70px;
         right: 0;
     }
 }
