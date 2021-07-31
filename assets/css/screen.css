@@ -1994,9 +1994,7 @@ body {
 }
 @media only screen and (min-width: 1025px) {
     .toc {
-        position: fixed;
-        top: 70px;
-        right: 0;
+        display: none;
     }
 }
 .is-active-link::before {
