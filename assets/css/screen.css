@@ -1972,13 +1972,35 @@ html.dark-mode .subscribe-form .success .message-success {
 body {
     overflow: visible;
 }
-.post-full-content {
+/* .post-full-content {
     display: grid;
     grid-template-columns: 1fr 0.2fr;
     padding: 0 0 6vw;
     margin-right: auto;
     margin-left: auto;
+} */
+.post-full-content {
+    display: grid;
+    grid-template-columns:
+        [full-start]
+        minmax(4vmin, auto)
+            [wide-start]
+            minmax(auto, 240px)
+                [main-start]
+                    min(720px, calc(100% - 8vw))
+                [main-end]
+            minmax(auto, 240px)
+            [wide-end]
+        minmax(4vmin, auto)
+        [full-end]
+    ;
 }
+
+.post-full-content > * {
+    grid-column: main-start / main-end;
+}
+
+
 .toc-container {
     order: 1;
 }
