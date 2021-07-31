@@ -829,7 +829,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .gh-canvas .article-image {
-    grid-column: wide-start / wide-end;
+    /* grid-column: wide-start / wide-end; */
     width: 100%;
     margin: 6vmin 0 0;
 }
@@ -860,15 +860,15 @@ use it for applying any other styles. */
     display: grid;
     grid-template-columns:
         [full-start]
-        minmax(4vmin, auto)
+        minmax(0vmin, auto)
             [wide-start]
-            minmax(auto, 240px)
+            minmax(5vmin auto)
                 [main-start]
-                    min(720px, calc(100% - 8vw))
+                    min(720px, calc(100% - 15vw))
                 [main-end]
-            minmax(auto, 240px)
+            minmax(25vmin, 240px)
             [wide-end]
-        minmax(4vmin, auto)
+        minmax(80vmin, auto)
         [full-end]
     ;
 }
@@ -2023,9 +2023,10 @@ body {
     Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
     font-size: 1.6rem;
     line-height: 1.6em;
-    padding: 0 0.8em;
+    padding: 100px 0.8em;
+    right: 1p;
 }
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1140px) {
     .toc {
         display: none;
     }
