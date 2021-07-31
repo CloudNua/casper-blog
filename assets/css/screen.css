@@ -1992,7 +1992,7 @@ body {
     line-height: 1.6em;
     padding: 0 0.8em;
 }
-@media only screen and (min-width: 1025px) {
+@media only screen and (max-width: 1025px) {
     .toc {
         display: none;
     }
