@@ -1975,8 +1975,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 0.2fr;
     padding: 0 0 6vw;
-    margin-right: 150px;
-    margin-left: 335px;
+    margin-right: auto;
+    margin-left: auto;
 }
 .toc-container {
     order: 1;
@@ -1990,6 +1990,13 @@ body {
     font-size: 1.6rem;
     line-height: 1.6em;
     padding: 0 0.8em;
+}
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .toc {
+        position: fixed;
+        top: 54px;
+        right: 0;
+    }
 }
 .is-active-link::before {
     background-color: #3eb0ef;
