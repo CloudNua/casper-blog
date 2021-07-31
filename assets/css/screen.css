@@ -829,15 +829,10 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .gh-canvas .article-image {
-    grid-column: wide-start / wide-end;
+    /* grid-column: wide-start / wide-end; */
     width: 100%;
     margin: 6vmin 0 0;
 }
-/* .gh-canvas {
-    grid-column: wide-start / wide-end;
-    width: 100%;
-    margin: 6vmin 0 0;
-} */
 
 .gh-canvas .article-image img {
     display: block;
@@ -861,13 +856,13 @@ make sure this only happens on large viewports / desktop-ish devices.
 is laid out on top of. Canvas just defines the grid, we don't
 use it for applying any other styles. */
 
-/* .gh-canvas {
+.gh-canvas {
     display: grid;
     grid-template-columns:
         [full-start]
         minmax(0vmin, auto)
             [wide-start]
-            minmax(5vmin auto)
+            minmax(5vmin, 240px)
                 [main-start]
                     min(720px, calc(100% - 15vw))
                 [main-end]
@@ -876,8 +871,8 @@ use it for applying any other styles. */
         minmax(80vmin, auto)
         [full-end]
     ;
-} */
-.gh-canvas {
+}
+/* .gh-canvas {
     display: grid;
     grid-template-columns:
         [full-start]
@@ -892,7 +887,7 @@ use it for applying any other styles. */
         minmax(4vmin, auto)
         [full-end]
     ;
-}
+} */
 .gh-canvas > * {
     grid-column: main-start / main-end;
 }
