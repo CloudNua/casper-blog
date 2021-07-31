@@ -1993,7 +1993,7 @@ body {
     padding: 0 0.8em;
 }
 @media only screen and (max-width: 1025px) {
-    .toc {
+    .toc-container .toc {
         display: none;
     }
 }
